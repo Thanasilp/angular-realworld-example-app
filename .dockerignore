@@ -1,0 +1,34 @@
+# Dependency directories (ตัวที่ทำให้ช้าที่สุด)
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+tmp/
+out/
+.next/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker files (ไม่จำเป็นต้องให้ Docker ก๊อปปี้ตัวเองเข้าไป)
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s # ระยะเวลาระหว่างการดึงข้อมูล
+
+scrape_configs: # การตั้งค่าการดึงข้อมูล
+  - job_name: 'prometheus' # ชื่อของงาน
+    static_configs: # การตั้งค่าคงที่
+      - targets: ['localhost:9090'] # เป้าหมายที่ต้องการดึงข้อมูล
+
+  # ในงานจริง เราจะเพิ่ม job_name: 'angular-app' หรือ 'node-exporter' ตรงนี้

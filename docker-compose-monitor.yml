@@ -1,0 +1,15 @@
+version: '3' # Docker Compose file version
+services:
+  prometheus: # กำหนดบริการ Prometheus
+    image: prom/prometheus # ใช้ image Docker อย่างเป็นทางการของ Prometheus
+    ports: 
+      - "9090:9090" # แมปพอร์ต 9090 ของโฮสต์ไปยังพอร์ต 9090 ของคอนเทนเนอร์
+    volumes: 
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml # แมปไฟล์การตั้งค่า Prometheus จากโฮสต์ไปยังคอนเทนเนอร์ จาก Prometheus.yml --> /etc/prometheus/prometheus.yml
+
+  grafana: # กำหนดบริการ Grafana
+    image: grafana/grafana # ใช้ image Docker อย่างเป็นทางการของ Grafana
+    ports:
+      - "3000:3000" # แมปพอร์ต 3000 ของโฮสต์ไปยังพอร์ต 3000 ของคอนเทนเนอร์
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
